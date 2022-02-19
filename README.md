@@ -33,6 +33,8 @@ npm install @kivs/flag-emoji@1.0.0
     </p>
     ```
 
+    ![example](./assets/example.png)
+
 - Create the element with the _DOM API_:
 
     ```javascript
@@ -58,4 +60,3 @@ npm install @kivs/flag-emoji@1.0.0
     // by ISO/country code
     FlagEmoji.find_by_code('es')
     ```
-
