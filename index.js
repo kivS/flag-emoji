@@ -1,6 +1,6 @@
 class FlagEmoji extends HTMLElement{
 
-    _emojis = {
+    static emojis = {
         "AC": {
             "country_name": "Ascension Island",
             "emoji": "🇦🇨",
@@ -1293,7 +1293,6 @@ class FlagEmoji extends HTMLElement{
         }
     }
 
-
     constructor(){
         super()
         this.attachShadow({ mode: 'open' })
@@ -1324,7 +1323,8 @@ class FlagEmoji extends HTMLElement{
     }
 
     _renderFlag(){
-        let country = this._emojis[this.country]
+        
+        let country = FlagEmoji.emojis[this.country]
 
         if (!country) return console.error(`country [ ${this.country} ] not found!`)
 
@@ -1332,19 +1332,19 @@ class FlagEmoji extends HTMLElement{
             <span title="${country['country_name']}">${country['emoji']}</span>
         `
 
-        this.setAttribute('x-name', country['country_name'])
+        this.setAttribute('name', country['country_name'])
     }
 
-    find_by_name(country_name) {
+    static find_by_name(country_name) {
         let matches = []
 
-        for (let item in this._emojis) {
-            let name = this._emojis[item]['country_name'].toLowerCase()
+        for (let item in FlagEmoji.emojis) {
+            let name =  FlagEmoji.emojis[item]['country_name'].toLowerCase()
             
             let matched = name.indexOf(country_name.toLowerCase()) !== -1
 
             if(matched){
-                matches.push({ emoji: this._emojis[item]['emoji'] , code: item, name: name})
+                matches.push({ emoji:  FlagEmoji.emojis[item]['emoji'] , code: item, name: name})
             }
         }
 
@@ -1353,16 +1353,16 @@ class FlagEmoji extends HTMLElement{
 
     }
 
-    find_by_code(country_code) {
+    static find_by_code(country_code) {
         let matches = []
 
-        for (let item in this._emojis) {
+        for (let item in  FlagEmoji.emojis) {
             let code = item.toLowerCase()
 
             let matched = code.indexOf(country_code.toLowerCase()) !== -1
 
             if (matched) {
-                matches.push({ emoji: this._emojis[item]['emoji'], code: code, name: this._emojis[item]['country_name'] })
+                matches.push({ emoji:  FlagEmoji.emojis[item]['emoji'], code: code, name:  FlagEmoji.emojis[item]['country_name'] })
             }
         }
 
