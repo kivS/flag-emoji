@@ -1312,8 +1312,8 @@ class FlagEmoji extends HTMLElement{
 
     attributeChangedCallback(attrName, oldVal, newVal){
         if (newVal !== oldVal) {
-            this[attrName] = newVal;
-            this._renderFlag();
+            this[attrName] = newVal
+            this._renderFlag()
         }
     }
 
