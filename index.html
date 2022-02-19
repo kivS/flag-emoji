@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag Emoji</title>
+    <script src="index.js"></script>
+</head>
+<body>
+   <div>
+        <p> USA Flag <flag-emoji country="us" /> </p>
+        <script>
+            let flag = new FlagEmoji();
+
+            console.log('Find by name: ')
+            flag.find_by_name('unit')
+
+            console.log('Find by code: ')
+            flag.find_by_code('es')
+        </script>
+   </div>
+
+</body>
+</html>
