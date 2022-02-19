@@ -1,0 +1,27 @@
+{
+  "name": "@kivs/flag-emoji",
+  "version": "1.0.0",
+  "description": "Unicode flag emojis custom web component",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0 "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kivS/flag-emoji.git"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "unicode",
+    "emojis",
+    "country",
+    "flags"
+  ],
+  "author": "Vik Borges",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kivS/flag-emoji/issues"
+  },
+  "homepage": "https://github.com/kivS/flag-emoji#readme"
+}
